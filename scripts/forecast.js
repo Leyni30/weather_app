@@ -10,9 +10,6 @@ const getWeather = async (locationKey) => {
     return weatherData[0];
 }
 
-
-
-
 // Get city information
 const getCity = async (city) => {
     const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
@@ -25,11 +22,11 @@ const getCity = async (city) => {
     return data[0];
 }
 
-getCity('San Francisco').then(data => {
-    return getWeather(data.Key);
-}).then(data => {
-    console.log(data);
-}).catch(err => console.log(err));
+// getCity('San Francisco').then(data => {
+//     return getWeather(data.Key);
+// }).then(data => {
+//     console.log(data);
+// }).catch(err => console.log(err));
 
 /*The second .then() method is there
  because the first one returns a promise
